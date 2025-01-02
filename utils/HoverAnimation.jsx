@@ -7,15 +7,16 @@ function HoverAnimation({ children }) {
 
   const handleMouseEnter = () => {
     gsap.to(hoverRef.current, {
-      duration: 0.5,
+      duration: 0.3,
       backgroundSize: "100%",
+      ease: "power1.in",
     });
   };
   const handleMouseLeave = () => {
     gsap.to(hoverRef.current, {
-      duration: 0.8,
+      duration: 0.3,
       backgroundSize: "0%",
-      ease: "power2.inOut",
+      ease: "power1.out",
     });
   };
   return (
@@ -23,16 +24,46 @@ function HoverAnimation({ children }) {
       onMouseEnter={() => handleMouseEnter()}
       onMouseLeave={() => handleMouseLeave()}
     >
+      <Placholder className="place-holder">{children}</Placholder>
       <HoverHolder ref={hoverRef}>{children}</HoverHolder>
     </HoverContainer>
   );
 }
 
 const HoverContainer = styled.div`
+  position: relative;
   width: fit-content;
   display: inline;
   padding: 10px 20px;
-  background-color: pink;
+  display: grid;
+  place-content: center;
+
+  .place-holder {
+    opacity: 1;
+    transition: all 0.1s ease-in-out;
+    transition-delay: 0.05s;
+  }
+
+  &:hover {
+    .place-holder {
+      opacity: 0.7;
+      transition: all 0.1s ease-in-out;
+      transition-delay: 0.24s;
+    }
+  }
+`;
+
+const Placholder = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  display: grid;
+  color: black;
+  place-content: center;
 `;
 const HoverHolder = styled.div`
   position: relative;
@@ -42,7 +73,14 @@ const HoverHolder = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   width: fit-content;
-  cursor: pointer;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-baclground-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
+  transform: translateY(-0.5px);
+  z-index: 2;
 `;
 
 export default HoverAnimation;

@@ -221,12 +221,6 @@ function Home() {
         <HomeAbout />
         <CaseStudy />
         <Timeline />
-        <HoverAnimation>
-          <p>Hover me</p>
-        </HoverAnimation>
-        <HoverAnimation>
-          <p>Hover me</p>
-        </HoverAnimation>
         <Contact />
         <Footer />
       </MainHolder>

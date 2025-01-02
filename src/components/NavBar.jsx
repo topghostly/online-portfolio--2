@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import HoverAnimation from "../../utils/HoverAnimation";
 
 function NavBar() {
   return (
@@ -7,11 +8,21 @@ function NavBar() {
       <NavHeadText>WHY TEMITOPE</NavHeadText>
       <NavLinkHolder>
         <ul>
-          <li className="active">01/HEY</li>
-          <li>02/ABOUT</li>
-          <li>03/CASE</li>
-          <li>04/CONTACT</li>
-          <li>05/RESUME</li>
+          <li>
+            <HoverAnimation>01/HEY</HoverAnimation>
+          </li>
+          <li>
+            <HoverAnimation>02/ABOUT</HoverAnimation>
+          </li>
+          <li>
+            <HoverAnimation>03/CASE</HoverAnimation>
+          </li>
+          <li>
+            <HoverAnimation>04/CONTACT</HoverAnimation>
+          </li>
+          <li>
+            <HoverAnimation>05/RESUME</HoverAnimation>
+          </li>
         </ul>
       </NavLinkHolder>
     </NavContainer>
@@ -41,12 +52,12 @@ const NavLinkHolder = styled.nav`
     list-style-type: none;
     display: flex;
     justify-content: space-between;
-    color: var(--color-brown-500);
+    /* color: var(--color-brown-500); */
 
     li {
       cursor: pointer;
-      padding: 3px 0px;
-      cursor: no-drop;
+      /* padding: 3px 0px; */
+      /* cursor: no-drop; */
     }
     .active {
       color: black;
