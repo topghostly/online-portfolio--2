@@ -6,6 +6,7 @@ import CaseNav from "../components/CaseNav";
 import WorkCarousel from "../components/CaseCarousel";
 import Timeline from "../components/Timeline";
 import { Peace, World } from "../../utils/svg";
+import HoverAnimation from "../../utils/HoverAnimation";
 
 // Header Style
 const HeaderHolder = styled.section`
@@ -201,10 +202,10 @@ function Footer() {
     <FooterHolder>
       <ul>
         <li>LINKEDIN</li>
-        <li>LINKEDIN</li>
-        <li>LINKEDIN</li>
-        <li>LINKEDIN</li>
-        <li>LINKEDIN</li>
+        <li>GITHUB</li>
+        <li>INSTAGRAM</li>
+        <li>TWITTER</li>
+        <li>MOBILE</li>
       </ul>
     </FooterHolder>
   );
@@ -220,6 +221,12 @@ function Home() {
         <HomeAbout />
         <CaseStudy />
         <Timeline />
+        <HoverAnimation>
+          <p>Hover me</p>
+        </HoverAnimation>
+        <HoverAnimation>
+          <p>Hover me</p>
+        </HoverAnimation>
         <Contact />
         <Footer />
       </MainHolder>

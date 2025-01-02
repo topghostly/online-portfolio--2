@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { CASE_COMPONENTS } from "./CaseCarousel";
 
 // Timeline styles
 const Holder = styled.div`
@@ -30,12 +31,12 @@ const Holder = styled.div`
   }
 `;
 
-function Timelines() {
+function Timelines({ details: { name, type, date } }) {
   return (
     <Holder>
-      <p className="date">2024</p>
-      <p className="name">Sublime Designs</p>
-      <p className="type">Website</p>
+      <p className="date">{date}</p>
+      <p className="name">{name}</p>
+      <p className="type">{type}</p>
     </Holder>
   );
 }
@@ -47,10 +48,9 @@ function Timeline() {
         PROJECT <span>TIMELINE</span>
       </Head>
       <TimelineHolder>
-        <Timelines />
-        <Timelines />
-        <Timelines />
-        <Timelines />
+        {CASE_COMPONENTS.map((item, index) => (
+          <Timelines key={index} details={item} />
+        ))}
       </TimelineHolder>
     </Container>
   );

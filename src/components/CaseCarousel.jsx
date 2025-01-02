@@ -10,19 +10,29 @@ export const CASE_COMPONENTS = [
     name: "Sublime",
     component: <Sublime />,
     about: "Firm website for Sublime Designs",
-    type: "website",
+    type: "Website",
+    date: "2024",
+  },
+  {
+    name: "EchoNote",
+    component: <AgentMeet />,
+    about: "Voice memo mobile app",
+    type: "Mobile",
+    date: "2024",
   },
   {
     name: "ImageRaft",
     component: <ImageRaft />,
     about: "Firm website for Sublime Designs",
-    type: "website",
+    type: "Website",
+    date: "2023",
   },
   {
     name: "AgentMeet",
     component: <AgentMeet />,
     about: "Firm website for Sublime Designs",
-    type: "website",
+    type: "Website",
+    date: "2022",
   },
 ];
 
