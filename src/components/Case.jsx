@@ -11,6 +11,7 @@ function Case({
 
   const HolderRef = useRef(null);
 
+  // Hover/Dim animation logic
   useEffect(() => {
     if (DimComponent && !activeTab) {
       gsap.to(HolderRef.current, {
@@ -24,6 +25,7 @@ function Case({
       });
     }
   }, [DimComponent]);
+
   return (
     <CaseContainer id="case" ref={HolderRef}>
       <Head>
@@ -67,20 +69,22 @@ function Case({
 
 const CaseContainer = styled.div`
   width: 590px;
-  aspect-ratio: 1;
+  height: 590px;
   background-color: var(--color-brown-300);
   border-radius: 30px;
   display: grid;
-  grid-template-rows: 70px 1px 1fr;
+  grid-template-rows: 90px 45px 430px;
   gap: 10px;
-  padding: 25px;
+  /* padding: 25px; */
   /* opacity: ${(props) => props.dimComponent}; */
 `;
 
 const Head = styled.div`
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 90px;
+  grid-template-columns: 1fr 63px;
+  padding: 30px 30px 0px 30px;
+  height: fit-content;
   .head--content {
     display: flex;
     flex-direction: column;
@@ -129,9 +133,9 @@ const Head = styled.div`
 `;
 
 const Line = styled.div`
-  width: 100%;
+  width: 85%;
   height: 2px;
-  margin: 0px auto;
+  margin: 20px auto;
   border-radius: 100px;
   background-color: var(--color-brown-400);
 `;

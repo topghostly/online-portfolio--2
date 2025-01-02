@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Sublime from "./case-components/Sublime";
 import ImageRaft from "./case-components/ImageRaft";
 import AgentMeet from "./case-components/AgentMeet";
+import EchoNote from "./case-components/EchoNote";
 
 export const CASE_COMPONENTS = [
   {
@@ -29,7 +30,7 @@ export const CASE_COMPONENTS = [
   },
   {
     name: "AgentMeet",
-    component: <AgentMeet />,
+    component: <EchoNote />,
     about: "Firm website for Sublime Designs",
     type: "Website",
     date: "2022",
