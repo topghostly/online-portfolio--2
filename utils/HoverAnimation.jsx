@@ -37,11 +37,11 @@ const HoverContainer = styled.div`
   padding: 10px 20px;
   display: grid;
   place-content: center;
-
   .place-holder {
     opacity: 1;
     transition: all 0.1s ease-in-out;
     transition-delay: 0.05s;
+    cursor: pointer;
   }
 
   &:hover {
@@ -81,6 +81,7 @@ const HoverHolder = styled.div`
   color: transparent;
   transform: translateY(-0.5px);
   z-index: 2;
+  cursor: pointer;
 `;
 
 export default HoverAnimation;

@@ -201,11 +201,21 @@ function Footer() {
   return (
     <FooterHolder>
       <ul>
-        <li>LINKEDIN</li>
-        <li>GITHUB</li>
-        <li>INSTAGRAM</li>
-        <li>TWITTER</li>
-        <li>MOBILE</li>
+        <li>
+          <HoverAnimation>LINKEDIN</HoverAnimation>
+        </li>
+        <li>
+          <HoverAnimation>GITHUB</HoverAnimation>
+        </li>
+        <li>
+          <HoverAnimation>INSTAGRAM</HoverAnimation>
+        </li>
+        <li>
+          <HoverAnimation>TWITTER</HoverAnimation>
+        </li>
+        <li>
+          <HoverAnimation>MOBILE</HoverAnimation>
+        </li>
       </ul>
     </FooterHolder>
   );
