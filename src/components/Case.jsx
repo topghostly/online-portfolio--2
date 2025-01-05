@@ -75,8 +75,6 @@ const CaseContainer = styled.div`
   display: grid;
   grid-template-rows: 90px 45px 430px;
   gap: 10px;
-  /* padding: 25px; */
-  /* opacity: ${(props) => props.dimComponent}; */
 `;
 
 const Head = styled.div`
