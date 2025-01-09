@@ -31,7 +31,7 @@
   --fs-9: 6rem;
 }
 
-::selection {
+/* ::selection {
   background-color: var(--color-brown-500);
   color: white;
 }
@@ -45,7 +45,7 @@ body::-webkit-scrollbar-thumb {
 }
 body::-webkit-scrollbar-track {
   background-color: #f6f6f6;
-}
+} */
 * {
   padding: 0;
   margin: 0;

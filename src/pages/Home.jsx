@@ -7,6 +7,7 @@ import WorkCarousel from "../components/CaseCarousel";
 import Timeline from "../components/Timeline";
 import { Peace, World } from "../../utils/svg";
 import HoverAnimation from "../../utils/HoverAnimation";
+import Scene from "../components/model-component/Scene";
 
 // Header Style
 const HeaderHolder = styled.section`
@@ -233,6 +234,7 @@ function Home() {
         <Timeline />
         <Contact />
         <Footer />
+        <Scene />
       </MainHolder>
     </>
   );
