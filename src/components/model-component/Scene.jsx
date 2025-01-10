@@ -13,11 +13,11 @@ function Scene() {
   return (
     <SceneHolder>
       <Canvas>
-        <GizmoHelper>
+        {/* <GizmoHelper>
           <GizmoViewport />
-        </GizmoHelper>
-        <axesHelper args={[10]} />
-        <gridHelper args={[10]} />
+        </GizmoHelper> */}
+        {/* <axesHelper args={[10]} />
+        <gridHelper args={[10]} /> */}
         <OrbitControls />
         <directionalLight intensity={10} position={[0, 1.6, 10]} />
         <Model />
@@ -33,6 +33,6 @@ const SceneHolder = styled.section`
   height: 100%;
   width: 100%;
   background: none;
-  z-index: 100;
+  /* z-index: 100; */
 `;
 export default Scene;
