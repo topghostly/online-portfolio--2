@@ -33,6 +33,5 @@ const SceneHolder = styled.section`
   height: 100%;
   width: 100%;
   background: none;
-  /* z-index: 100; */
 `;
 export default Scene;

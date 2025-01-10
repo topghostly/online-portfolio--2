@@ -8,9 +8,9 @@ function Model(props) {
   const meshRef = useRef(null);
 
   useFrame(() => {
-    meshRef.current.rotation.y += 0.001;
-    meshRef.current.rotation.x += 0.001;
-    meshRef.current.rotation.z += 0.001;
+    meshRef.current.rotation.x += 0.0005;
+    meshRef.current.rotation.y += 0.0005;
+    meshRef.current.rotation.z += 0.0005;
   });
 
   const { nodes, materials } = useGLTF("/modias/cassette-freepoly.org.glb");
