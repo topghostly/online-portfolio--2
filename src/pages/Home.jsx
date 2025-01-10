@@ -46,6 +46,7 @@ const NameTag = styled.h1`
 
   span {
     font-family: "Helvetica-BlackCondensedOblique";
+    /* mix-blend-mode: difference; */
   }
 `;
 
