@@ -20,7 +20,7 @@ const HeaderHolder = styled.section`
 `;
 
 const Container = styled.div`
-  position: relative;
+  /* position: relative; */
 `;
 
 const TextContainer = styled.div`
@@ -134,6 +134,7 @@ function Header() {
   return (
     <HeaderHolder>
       <Container>
+        <Scene />
         <TextContainer>
           <Role>WEB & MOBILE DEVELOPER</Role>
           <NameTag>
@@ -234,7 +235,6 @@ function Home() {
         <Timeline />
         <Contact />
         <Footer />
-        <Scene />
       </MainHolder>
     </>
   );

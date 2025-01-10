@@ -31,21 +31,6 @@
   --fs-9: 6rem;
 }
 
-/* ::selection {
-  background-color: var(--color-brown-500);
-  color: white;
-}
-body::-webkit-scrollbar {
-  width: 4px;
-  display: none;
-}
-body::-webkit-scrollbar-thumb {
-  background-color: #2929298f;
-  border-radius: 30px;
-}
-body::-webkit-scrollbar-track {
-  background-color: #f6f6f6;
-} */
 * {
   padding: 0;
   margin: 0;
