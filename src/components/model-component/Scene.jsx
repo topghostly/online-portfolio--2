@@ -18,7 +18,7 @@ function Scene() {
         </GizmoHelper> */}
         {/* <axesHelper args={[10]} />
         <gridHelper args={[10]} /> */}
-        <OrbitControls />
+        <OrbitControls enableZoom={false} />
         <directionalLight intensity={10} position={[0, 1.6, 10]} />
         <Model />
       </Canvas>
@@ -33,5 +33,6 @@ const SceneHolder = styled.section`
   height: 100%;
   width: 100%;
   background: none;
+  opacity: 0.85;
 `;
 export default Scene;

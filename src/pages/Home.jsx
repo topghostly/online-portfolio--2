@@ -5,9 +5,10 @@ import styled from "styled-components";
 import CaseNav from "../components/CaseNav";
 import WorkCarousel from "../components/CaseCarousel";
 import Timeline from "../components/Timeline";
-import { Peace, World } from "../../utils/svg";
+import { FingerPrint, Peace, World } from "../../utils/svg";
 import HoverAnimation from "../../utils/HoverAnimation";
 import Scene from "../components/model-component/Scene";
+import { PillImage } from "../../utils/inline-images";
 
 // Header Style
 const HeaderHolder = styled.section`
@@ -16,7 +17,8 @@ const HeaderHolder = styled.section`
   width: 100%;
   height: calc(90vh - 100px);
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  pointer-events: none;
 `;
 
 const Container = styled.div`
@@ -26,7 +28,7 @@ const Container = styled.div`
 const TextContainer = styled.div`
   position: relative;
   display: grid;
-  grid-template-rows: 30px 1fr 150px;
+  grid-template-rows: 30px 1fr 180px;
   height: fit-content;
 `;
 
@@ -60,7 +62,6 @@ const AboutHolder = styled.section`
     font-family: "Graphix-Regular";
     font-size: var(--fs-7);
     text-align: center;
-    /* line-height: 50px; */
   }
 `;
 
@@ -152,8 +153,9 @@ function HomeAbout() {
   return (
     <AboutHolder>
       <p>
-        Hi, I’m Tope <Peace />, a software developer practicing and building
-        quality solutions for the past 4 years.
+        Hi, I’m <PillImage /> Tope <Peace />, a software developer <World />{" "}
+        practicing and building quality solutions <FingerPrint /> for the past 4
+        years.
       </p>
     </AboutHolder>
   );
