@@ -154,7 +154,7 @@ function HomeAbout() {
     <AboutHolder>
       <p>
         Hi, I’m <PillImage /> Tope <Peace />, a software developer <World />{" "}
-        practicing and building quality solutions <FingerPrint /> for the past 4
+        practicing and building quality solutions <FingerPrint /> for the past 5
         years.
       </p>
     </AboutHolder>

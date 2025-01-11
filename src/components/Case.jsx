@@ -68,17 +68,18 @@ function Case({
 }
 
 const CaseContainer = styled.div`
-  width: 590px;
-  height: 590px;
+  width: 100%;
+  aspect-ratio: 1;
   background-color: var(--color-brown-300);
   border-radius: 30px;
   display: grid;
-  grid-template-rows: 90px 45px 430px;
+  grid-template-rows: 15.25% 2.7% 79%;
   gap: 10px;
 `;
 
 const Head = styled.div`
   position: relative;
+  /* background-color: red; */
   display: grid;
   grid-template-columns: 1fr 63px;
   padding: 30px 30px 0px 30px;
@@ -96,6 +97,15 @@ const Head = styled.div`
       font-family: "Graphix-Regular";
       font-size: var(--fs-3);
       color: var(--color-brown-500);
+    }
+
+    @media (min-width: 1050px) and (max-width: 1250px) {
+      h1 {
+        font-size: var(--fs-4);
+      }
+      p {
+        font-size: var(--fs-1);
+      }
     }
   }
   .arrow {
@@ -127,21 +137,33 @@ const Head = styled.div`
       color: var(--color-brown-500);
       transition: all 0.2s ease-in-out;
     }
+    @media (min-width: 1050px) and (max-width: 1250px) {
+      width: 50px;
+
+      svg {
+        width: 25px;
+      }
+    }
   }
 `;
 
 const Line = styled.div`
   width: 85%;
   height: 2px;
-  margin: 20px auto;
+  margin: auto;
   border-radius: 100px;
   background-color: var(--color-brown-400);
+
+  @media (min-width: 1050px) and (max-width: 1250px) {
+    width: 90%;
+  }
 `;
 
 const Main = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
+  /* background-color: green; */
 `;
 
 export default Case;

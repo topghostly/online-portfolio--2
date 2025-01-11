@@ -3,10 +3,15 @@ import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 
 const NAV_ITEMS = [
-  { label: "All", position: 2, width: 70 },
-  { label: "Web", position: 89, width: 95 },
-  { label: "Mobile", position: 202, width: 120 },
+  { label: "All", position: 1, width: 23 },
+  { label: "Web", position: 28, width: 29 },
+  { label: "Mobile", position: 62, width: 37 },
 ];
+// const NAV_ITEMS = [
+//   { label: "All", position: 1, width: 70 },
+//   { label: "Web", position: 89, width: 95 },
+//   { label: "Mobile", position: 202, width: 120 },
+// ];
 
 function CaseNav() {
   const activeRef = useRef(null);
@@ -16,8 +21,8 @@ function CaseNav() {
     const { position, width } = NAV_ITEMS[activeIndex];
 
     gsap.to(activeRef.current, {
-      left: `${position}px`,
-      width: `${width}px`,
+      left: `${position}%`,
+      width: `${width}%`,
       duration: 0.7,
       ease: "bounce.out",
     });
@@ -58,6 +63,11 @@ const Holder = styled.div`
   border-radius: 100px;
   border: solid 3px var(--color-brown-400);
 
+  @media screen and (max-width: 768px) {
+    width: 270px;
+    height: 50px;
+  }
+
   ul {
     display: flex;
     height: 100%;
@@ -79,6 +89,10 @@ const Holder = styled.div`
         font-family: "Graphix-Medium";
         cursor: pointer;
         transition: all 0.3s ease-in-out;
+
+        @media screen and (max-width: 768px) {
+          font-size: var(--fs-3);
+        }
       }
       .active {
         color: black;
@@ -94,7 +108,7 @@ const Active = styled.div`
   left: 0;
   transform: translateY(-50%);
   width: 70px;
-  height: 45px;
+  height: 88%;
   background-color: var(--color-brown-300);
   border-radius: 100px;
   z-index: -1;
