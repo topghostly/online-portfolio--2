@@ -29,6 +29,17 @@ const Holder = styled.div`
     font-size: var(--fs-3);
     text-align: end;
   }
+
+  @media (max-width: 1050px) {
+    width: 500px;
+    height: 70px;
+    p.date {
+      font-size: var(--fs-6);
+    }
+  }
+  @media screen and (max-width: 628px) {
+    width: 100%;
+  }
 `;
 
 function Timelines({ details: { name, type, date } }) {
@@ -59,6 +70,9 @@ function Timeline() {
 const Container = styled.section`
   position: relative;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 `;
 
 const Head = styled.h1`
@@ -70,6 +84,10 @@ const Head = styled.h1`
   span {
     font-family: "Helvetica-BlackCondensedOblique";
   }
+
+  @media (max-width: 1050px) {
+    font-size: var(--fs-7);
+  }
 `;
 
 const TimelineHolder = styled.div`
@@ -78,6 +96,10 @@ const TimelineHolder = styled.div`
   align-items: flex-end;
   gap: 15px;
   flex-direction: column;
+
+  @media screen and (max-width: 628px) {
+    align-items: flex-start;
+  }
 `;
 
 export default Timeline;

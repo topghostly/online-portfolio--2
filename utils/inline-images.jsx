@@ -12,4 +12,9 @@ const Img = styled.img`
   margin: 0;
   padding: 0;
   transform: translateY(15px);
+
+  @media screen and (max-width: 1050px) {
+    width: var(--fs-6);
+    transform: translateY(10px);
+  }
 `;

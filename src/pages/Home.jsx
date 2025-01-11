@@ -62,6 +62,10 @@ const AboutHolder = styled.section`
     font-family: "Graphix-Regular";
     font-size: var(--fs-7);
     text-align: center;
+
+    @media screen and (max-width: 1050px) {
+      font-size: var(--fs-6);
+    }
   }
 `;
 
@@ -248,5 +252,20 @@ const MainHolder = styled.main`
   display: flex;
   flex-direction: column;
   gap: 90px;
+
+  @media (min-width: 768px) and (max-width: 1250px) {
+    padding: 0px 30px;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 0px 10px;
+  }
+
+  @media (max-width: 1050px) {
+    gap: 60px;
+  }
+  /* @media screen and (max-width: 767px) {
+    gap: 50px;
+  } */
 `;
 export default Home;

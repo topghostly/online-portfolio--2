@@ -63,8 +63,11 @@ const Container = styled.div`
   @media (min-width: 1050px) and (max-width: 1250px) {
     grid-template-columns: repeat(2, 490px);
   }
-  @media (min-width: 463px) and (max-width: 1050px) {
+  @media (min-width: 628px) and (max-width: 1050px) {
     grid-template-columns: repeat(1, 590px);
+  }
+  @media (max-width: 627px) {
+    grid-template-columns: repeat(1, 100%);
   }
 `;
 export default WorkCarousel;

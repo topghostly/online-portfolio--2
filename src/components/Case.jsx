@@ -75,15 +75,23 @@ const CaseContainer = styled.div`
   display: grid;
   grid-template-rows: 15.25% 2.7% 79%;
   gap: 10px;
+  position: relative;
+
+  @media (max-width: 627px) {
+    grid-template-rows: 22.25% 2.7% 72%;
+  }
 `;
 
 const Head = styled.div`
-  position: relative;
-  /* background-color: red; */
   display: grid;
   grid-template-columns: 1fr 63px;
   padding: 30px 30px 0px 30px;
   height: fit-content;
+
+  @media (max-width: 627px) {
+    display: block;
+    padding: 20px 20px 0px 20px;
+  }
   .head--content {
     display: flex;
     flex-direction: column;
@@ -108,6 +116,7 @@ const Head = styled.div`
       }
     }
   }
+
   .arrow {
     width: 63px;
     aspect-ratio: 1;
@@ -118,6 +127,24 @@ const Head = styled.div`
     border: solid 3px var(--color-brown-400);
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+
+    @media (min-width: 1050px) and (max-width: 1250px) {
+      width: 50px;
+
+      svg {
+        width: 25px;
+      }
+    }
+    @media (max-width: 627px) {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      z-index: 10;
+      width: 45px;
+      svg {
+        width: 15px;
+      }
+    }
 
     &:hover {
       border: solid 3px var(--color-brown-200);
@@ -136,13 +163,6 @@ const Head = styled.div`
       transform: rotate(315deg);
       color: var(--color-brown-500);
       transition: all 0.2s ease-in-out;
-    }
-    @media (min-width: 1050px) and (max-width: 1250px) {
-      width: 50px;
-
-      svg {
-        width: 25px;
-      }
     }
   }
 `;
@@ -164,6 +184,7 @@ const Main = styled.div`
   width: 100%;
   height: 100%;
   /* background-color: green; */
+  overflow: hidden;
 `;
 
 export default Case;
