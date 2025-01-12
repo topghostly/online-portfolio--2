@@ -1,14 +1,25 @@
-import React from "react";
+import gsap from "gsap";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 
 function OpenForWorkButton() {
+  const blinkingRef = useRef(null);
+
+  useEffect(() => {
+    gsap.to(blinkingRef.current, {
+      opacity: 0,
+      duration: 0.8,
+      repeat: -1,
+      yoyo: true,
+    });
+  });
   return (
     <Container>
       <Holder>
         <Text>
           Open to <span>new oppurtunities</span>
         </Text>
-        <BlinkingBox />
+        <BlinkingBox ref={blinkingRef} />
       </Holder>
     </Container>
   );
@@ -49,6 +60,7 @@ const BlinkingBox = styled.div`
   aspect-ratio: 1;
   background-color: var(--color-green);
   border-radius: 50%;
+  opacity: 1;
 `;
 
 export default OpenForWorkButton;

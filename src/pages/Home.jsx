@@ -15,10 +15,16 @@ const HeaderHolder = styled.section`
   position: relative;
   display: flex;
   width: 100%;
-  height: calc(90vh - 100px);
+  height: calc(80vh - 100px);
   justify-content: center;
   align-items: flex-end;
   pointer-events: none;
+  @media (max-width: 902px) {
+    height: calc(60vh);
+  }
+  @media (max-width: 549px) {
+    height: calc(55vh);
+  }
 `;
 
 const Container = styled.div`
@@ -28,8 +34,12 @@ const Container = styled.div`
 const TextContainer = styled.div`
   position: relative;
   display: grid;
-  grid-template-rows: 30px 1fr 180px;
+  grid-template-rows: 30px 1fr 100px;
   height: fit-content;
+
+  @media (max-width: 549px) {
+    grid-template-rows: 70px 1fr 100px;
+  }
 `;
 
 const Role = styled.p`
@@ -48,7 +58,17 @@ const NameTag = styled.h1`
 
   span {
     font-family: "Helvetica-BlackCondensedOblique";
-    /* mix-blend-mode: difference; */
+  }
+
+  @media (max-width: 902px) {
+    font-size: var(--fs-8);
+  }
+  @media (max-width: 549px) {
+    text-align: center;
+    line-height: 60px;
+    span {
+      display: block;
+    }
   }
 `;
 
@@ -80,6 +100,9 @@ const CaseHolder = styled.section`
 // Contact styles
 const ContactHolder = styled.section`
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 
   .contact--right {
     p {
@@ -87,6 +110,10 @@ const ContactHolder = styled.section`
       width: 600px;
       font-family: "Helvetica-Bold";
       line-height: 1.1;
+
+      @media (max-width: 1050px) {
+        font-size: var(--fs-8);
+      }
 
       span {
         font-family: "Helvetica-BoldOblique";
@@ -107,6 +134,9 @@ const ContactHolder = styled.section`
       svg {
         display: inline;
         width: calc(var(--fs-7) + 2px);
+        @media (max-width: 1050px) {
+          width: calc(var(--fs-6) + 2px);
+        }
       }
 
       p {
@@ -114,6 +144,10 @@ const ContactHolder = styled.section`
         font-size: var(--fs-7);
         font-family: "Graphix-Regular";
         text-align: right;
+
+        @media (max-width: 1050px) {
+          font-size: var(--fs-6);
+        }
       }
     }
   }
@@ -132,6 +166,20 @@ const FooterHolder = styled.footer`
 
     li {
       font-family: "Helvetica";
+    }
+  }
+  .abbr--text {
+    display: none;
+
+    @media (max-width: 627px) {
+      display: flex;
+    }
+  }
+  .full--text {
+    display: flex;
+
+    @media (max-width: 627px) {
+      display: none;
     }
   }
 `;
@@ -179,7 +227,7 @@ function Contact() {
     <ContactHolder>
       <div className="contact--right">
         <p>
-          Want to reach <span>out?</span>
+          Want to <br /> reach <span>out?</span>
         </p>
       </div>
       <div className="contact--left">
@@ -202,6 +250,7 @@ function Contact() {
           <p>topghostly@gmail.com</p>
         </a>
       </div>
+      <Footer />
     </ContactHolder>
   );
 }
@@ -209,7 +258,7 @@ function Contact() {
 function Footer() {
   return (
     <FooterHolder>
-      <ul>
+      <ul className="full--text">
         <li>
           <HoverAnimation>LINKEDIN</HoverAnimation>
         </li>
@@ -224,6 +273,23 @@ function Footer() {
         </li>
         <li>
           <HoverAnimation>MOBILE</HoverAnimation>
+        </li>
+      </ul>
+      <ul className="abbr--text">
+        <li>
+          <HoverAnimation>LI</HoverAnimation>
+        </li>
+        <li>
+          <HoverAnimation>GH</HoverAnimation>
+        </li>
+        <li>
+          <HoverAnimation>IG</HoverAnimation>
+        </li>
+        <li>
+          <HoverAnimation>TW</HoverAnimation>
+        </li>
+        <li>
+          <HoverAnimation>MB</HoverAnimation>
         </li>
       </ul>
     </FooterHolder>
@@ -241,7 +307,6 @@ function Home() {
         <CaseStudy />
         <Timeline />
         <Contact />
-        <Footer />
       </MainHolder>
     </>
   );
@@ -252,6 +317,7 @@ const MainHolder = styled.main`
   display: flex;
   flex-direction: column;
   gap: 90px;
+  overflow-x: hidden;
 
   @media (min-width: 768px) and (max-width: 1250px) {
     padding: 0px 30px;
@@ -264,8 +330,5 @@ const MainHolder = styled.main`
   @media (max-width: 1050px) {
     gap: 60px;
   }
-  /* @media screen and (max-width: 767px) {
-    gap: 50px;
-  } */
 `;
 export default Home;
