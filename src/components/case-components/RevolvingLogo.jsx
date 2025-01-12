@@ -17,7 +17,7 @@ function RevolvingLogo({ background, color }) {
     });
   }, [words]);
   return (
-    <Spiner ref={ref} backroundColor={background} textColor={color}>
+    <Spiner ref={ref} backroundcolor={background} textcolor={color}>
       <Svgholder>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -385,8 +385,8 @@ const Spiner = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${(props) => props.backroundColor};
-  color: ${(props) => props.textColor};
+  background-color: ${(props) => props.backroundcolor};
+  color: ${(props) => props.textcolor};
   transition: all 0.7s ease-in-out;
   cursor: pointer;
   scale: 0.4;
@@ -400,7 +400,7 @@ const Spiner = styled.div`
     height: 100%;
     position: absolute;
     animation: ${Spin} 12s linear infinite;
-    color: ${(props) => props.textColor};
+    color: ${(props) => props.textcolor};
     gap: 2px;
 
     span {

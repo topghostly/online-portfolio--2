@@ -54,9 +54,8 @@ function Case({
               d="m141.1,400h517.8m0,0l-188.47-188.33m188.47,188.33l-188.47,188.33"
               fill="none"
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="66.67"
+              strokeLinecap="round"
+              strokeWidth="66.67"
             />
           </svg>
         </div>

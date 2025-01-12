@@ -242,9 +242,8 @@ function Contact() {
               d="m240,560l320-320m0,0H240m320,0v320"
               fill="none"
               stroke="#000"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="63"
+              strokeLinecap="round"
+              strokeWidth="63"
             />
           </svg>
           <p>topghostly@gmail.com</p>
