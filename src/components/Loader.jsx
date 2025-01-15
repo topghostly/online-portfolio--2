@@ -27,23 +27,19 @@ function Loader() {
 
   useEffect(() => {
     const tl = gsap.timeline({});
-    tl.to(lineRef.current, {
-      delay: 2,
-      width: "50vw",
-      ease: "back.out(1.7)",
-      duration: 1.7,
-    })
-      .fromTo(
-        textRef.current.querySelectorAll("span"),
-        {
-          y: "110%",
-        },
-        {
-          y: 0,
-          stagger: 0.06,
-        },
-        "-=1.5"
-      )
+
+    tl.fromTo(
+      textRef.current.querySelectorAll("span"),
+      {
+        y: "110%",
+      },
+      {
+        delay: 2,
+        y: 0,
+        stagger: 0.06,
+      },
+      "-=1.5"
+    )
       .to(textRef.current.querySelectorAll("span"), {
         y: "-110%",
         delay: 1,
