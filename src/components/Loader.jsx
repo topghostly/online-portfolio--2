@@ -28,11 +28,8 @@ function Loader() {
   useEffect(() => {
     const tl = gsap.timeline({});
 
-    tl.fromTo(
+    tl.to(
       textRef.current.querySelectorAll("span"),
-      {
-        y: "110%",
-      },
       {
         delay: 2,
         y: 0,
@@ -42,7 +39,7 @@ function Loader() {
     )
       .to(textRef.current.querySelectorAll("span"), {
         y: "-110%",
-        delay: 1,
+        delay: 2,
         stagger: -0.06,
       })
       .to(
@@ -50,6 +47,7 @@ function Loader() {
         {
           opacity: 0,
           onComplete: () => {
+            enableScrolling();
             gsap.to(containerRef.current, {
               display: "none",
             });
@@ -107,6 +105,7 @@ const Text = styled.p`
 
   span {
     font-size: var(--fs-6);
+    transform: translateY(110%);
 
     &:nth-child(3) {
       color: var(--color-brown-400);
