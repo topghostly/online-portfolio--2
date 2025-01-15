@@ -3,6 +3,12 @@ import styled from "styled-components";
 
 function GrainAnimation({ children }) {
   useEffect(() => {
+    // Check if the grain function is loaded
+    if (typeof grained === "undefined") {
+      console.error("Grained is not defined");
+      return;
+    }
+
     grained("#grainLayer", {
       animate: true,
       patternWidth: 100,

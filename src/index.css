@@ -46,33 +46,33 @@
 
 @font-face {
   font-family: "Helvetica-Bold";
-  src: url(./fonts/Helvetica-Bold.ttf) format("truetype");
+  src: url(/fonts/Helvetica-Bold.woff2) format("woff2");
 }
 @font-face {
   font-family: "Helvetica";
-  src: url(./fonts/Helvetica.ttf) format("truetype");
+  src: url(/fonts/Helvetica.woff2) format("woff2");
 }
 @font-face {
   font-family: "Helvetica-LightOblique";
-  src: url(./fonts/Helvetica-LightOblique.ttf) format("truetype");
+  src: url(/fonts/Helvetica-LightOblique.woff2) format("woff2");
 }
 @font-face {
   font-family: "Helvetica-BoldCondensed";
-  src: url(./fonts/Helvetica-BoldCondensed.otf) format("opentype");
+  src: url(/fonts/Helvetica-BoldCondensed.woff2) format("woff2");
 }
 @font-face {
   font-family: "Helvetica-BoldOblique";
-  src: url(./fonts/Helvetica-BoldOblique.ttf) format("truetype");
+  src: url(/fonts/Helvetica-BoldOblique.woff2) format("woff2");
 }
 @font-face {
   font-family: "Helvetica-BlackCondensedOblique";
-  src: url(./fonts/HelveticaBlackCondensedOblique.otf) format("opentype");
+  src: url(/fonts/HelveticaBlackCondensedOblique.woff2) format("woff2");
 }
 @font-face {
   font-family: "Graphix-Regular";
-  src: url(./fonts/Graphik-Regular-Trial.otf) format("opentype");
+  src: url(/fonts/Graphik-Regular-Trial.woff2) format("woff2");
 }
 @font-face {
   font-family: "Graphix-Medium";
-  src: url(./fonts/Graphik-Medium-Trial.otf) format("opentype");
+  src: url(/fonts/Graphik-Medium-Trial.woff2) format("woff2");
 }
