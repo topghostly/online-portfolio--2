@@ -21,7 +21,6 @@ function Loader() {
   }, []);
 
   // Animation Logic
-  const lineRef = useRef(null);
   const textRef = useRef(null);
   const containerRef = useRef(null);
 
@@ -64,10 +63,7 @@ function Loader() {
           <span>REAL</span>
           <span>AYINLA</span>
         </Text>
-        <Line ref={lineRef} />
       </Content>
-      <Curtain className="upper-curtain" />
-      <Curtain className="lower-curtain" />
     </LoaderContainer>
   );
 }
@@ -81,6 +77,8 @@ const LoaderContainer = styled.div`
   display: grid;
   grid-template-rows: 50% 50%;
   z-index: 900;
+  height: 100%;
+  background-color: var(--color-brown-800);
 `;
 
 const Content = styled.div`
@@ -103,9 +101,23 @@ const Text = styled.p`
   gap: 8px;
   overflow: hidden;
 
+  @media (max-width: 400px) {
+    gap: 4px;
+  }
+
   span {
     font-size: var(--fs-6);
     transform: translateY(110%);
+
+    @media (max-width: 826px) {
+      font-size: var(--fs-4);
+    }
+    @media (max-width: 505px) {
+      font-size: var(--fs-3);
+    }
+    @media (max-width: 400px) {
+      font-size: var(--fs-2);
+    }
 
     &:nth-child(3) {
       color: var(--color-brown-400);
@@ -113,17 +125,4 @@ const Text = styled.p`
   }
 `;
 
-const Line = styled.div`
-  position: relative;
-  width: 0px;
-  background-color: var(--color-brown-500);
-  height: 1px;
-`;
-
-const Curtain = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-brown-800);
-`;
 export default Loader;

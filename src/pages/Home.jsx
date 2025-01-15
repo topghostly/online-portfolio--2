@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import NavBar from "../components/NavBar";
 import OpenForWorkButton from "../components/OpenForWorkButton";
 import styled from "styled-components";
@@ -9,6 +9,7 @@ import { FingerPrint, Peace, World } from "../../utils/svg";
 import HoverAnimation from "../../utils/HoverAnimation";
 import Scene from "../components/model-component/Scene";
 import { PillImage } from "../../utils/inline-images";
+import gsap from "gsap";
 
 // Header Style
 const HeaderHolder = styled.section`
@@ -185,8 +186,15 @@ const FooterHolder = styled.footer`
 `;
 
 function Header() {
+  const headerRef = useRef(null);
+  useEffect(() => {
+    gsap.to(headerRef.current, {
+      opacity: 0,
+      delay: 3.4,
+    });
+  });
   return (
-    <HeaderHolder>
+    <HeaderHolder ref={headerRef}>
       <Container>
         <Scene />
         <TextContainer>

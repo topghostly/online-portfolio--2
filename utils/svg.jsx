@@ -89,7 +89,6 @@ export function FingerPrint() {
 }
 
 // Keyframe shake animation
-
 const shakeAnimation = keyframes`
   0% {
     transform: translateY(8px) rotateZ(0deg);
@@ -125,6 +124,41 @@ const shakeAnimation = keyframes`
     transform: translateY(8px) rotateZ(0deg);
   }
 `;
+const shakeAnimation2 = keyframes`
+  0% {
+    transform: translateY(5px) rotateZ(0deg);
+  }
+  10% {
+    transform: translateY(5px) rotateZ(-10deg);
+  }
+  20% {
+    transform: translateY(5px) rotateZ(10deg);
+  }
+  30% {
+    transform: translateY(5px) rotateZ(-10deg);
+  }
+  40% {
+    transform: translateY(5px) rotateZ(0deg);
+  }
+  50% {
+    transform: translateY(5px) rotateZ(0deg);
+  }
+  60% {
+    transform: translateY(5px) rotateZ(10deg);
+  }
+  70% {
+    transform: translateY(5px) rotateZ(-10deg);
+  }
+  80% {
+    transform: translateY(5px) rotateZ(10deg);
+  }
+  90% {
+    transform: translateY(5px) rotateZ(-10deg);
+  }
+  100% {
+    transform: translateY(5px) rotateZ(0deg);
+  }
+`;
 
 const AboutSVG = styled.svg`
   width: var(--fs-7);
@@ -132,7 +166,12 @@ const AboutSVG = styled.svg`
   transform: translateY(8px);
 
   &:nth-child(2) {
-    animation: ${shakeAnimation} 3s ease-in-out infinite;
+    animation: ${shakeAnimation} 3s ease-in-out forwards infinite;
+    animation-delay: 20;
+
+    @media screen and (max-width: 1050px) {
+      animation: ${shakeAnimation2} 3s ease-in-out forwards infinite;
+    }
   }
 
   @media screen and (max-width: 1050px) {
