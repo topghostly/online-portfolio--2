@@ -5,6 +5,7 @@ import { useRef } from "react";
 function RevolvingLogo({ background, color }) {
   const ref = useRef(null);
   const words = " SUBLIME • DESIGNS • CONSTRUCTION • ASSOCIATES • LIMITED •";
+
   useEffect(() => {
     const containerRef = ref.current;
     const textElement = containerRef.querySelectorAll(".chara");
@@ -17,7 +18,7 @@ function RevolvingLogo({ background, color }) {
     });
   }, [words]);
   return (
-    <Spiner ref={ref} backroundcolor={background} textcolor={color}>
+    <Spiner ref={ref} $backroundcolor={background} $textcolor={color}>
       <Svgholder>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -385,8 +386,8 @@ const Spiner = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${(props) => props.backroundcolor};
-  color: ${(props) => props.textcolor};
+  background-color: ${(props) => props.$backroundcolor};
+  color: ${(props) => props.$textcolor};
   transition: all 0.7s ease-in-out;
   cursor: pointer;
   scale: 0.4;
@@ -400,7 +401,7 @@ const Spiner = styled.div`
     height: 100%;
     position: absolute;
     animation: ${Spin} 12s linear infinite;
-    color: ${(props) => props.textcolor};
+    color: ${(props) => props.$textcolor};
     gap: 2px;
 
     span {
