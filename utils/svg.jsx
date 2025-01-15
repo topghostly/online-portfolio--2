@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useEffect } from "react";
+import styled, { keyframes } from "styled-components";
 
 export function Peace() {
   return (
@@ -88,14 +88,56 @@ export function FingerPrint() {
   );
 }
 
+// Keyframe shake animation
+
+const shakeAnimation = keyframes`
+  0% {
+    transform: translateY(8px) rotateZ(0deg);
+  }
+  10% {
+    transform: translateY(8px) rotateZ(-10deg);
+  }
+  20% {
+    transform: translateY(8px) rotateZ(10deg);
+  }
+  30% {
+    transform: translateY(8px) rotateZ(-10deg);
+  }
+  40% {
+    transform: translateY(8px) rotateZ(0deg);
+  }
+  50% {
+    transform: translateY(8px) rotateZ(0deg);
+  }
+  60% {
+    transform: translateY(8px) rotateZ(10deg);
+  }
+  70% {
+    transform: translateY(8px) rotateZ(-10deg);
+  }
+  80% {
+    transform: translateY(8px) rotateZ(10deg);
+  }
+  90% {
+    transform: translateY(8px) rotateZ(-10deg);
+  }
+  100% {
+    transform: translateY(8px) rotateZ(0deg);
+  }
+`;
+
 const AboutSVG = styled.svg`
   width: var(--fs-7);
   height: var(--fs-7);
   transform: translateY(8px);
 
+  &:nth-child(2) {
+    animation: ${shakeAnimation} 3s ease-in-out infinite;
+  }
+
   @media screen and (max-width: 1050px) {
     width: var(--fs-6);
     height: var(--fs-6);
-    transform: translateY(5 px);
+    transform: translateY(5px);
   }
 `;
