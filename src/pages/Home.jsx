@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import NavBar from "../components/NavBar";
 import OpenForWorkButton from "../components/OpenForWorkButton";
 import styled from "styled-components";
@@ -9,7 +9,7 @@ import { FingerPrint, Peace, World } from "../../utils/svg";
 import HoverAnimation from "../../utils/HoverAnimation";
 import Scene from "../components/model-component/Scene";
 import { PillImage } from "../../utils/inline-images";
-import gsap from "gsap";
+import SlideUpAnimation from "../components/SlideUpAnimation";
 
 // Header Style
 const HeaderHolder = styled.section`
@@ -27,11 +27,9 @@ const HeaderHolder = styled.section`
     height: calc(55vh);
   }
 `;
-
 const Container = styled.div`
   /* position: relative; */
 `;
-
 const TextContainer = styled.div`
   position: relative;
   display: grid;
@@ -42,7 +40,6 @@ const TextContainer = styled.div`
     grid-template-rows: 70px 1fr 100px;
   }
 `;
-
 const Role = styled.p`
   position: relative;
   color: var(--color-brown-500);
@@ -50,7 +47,6 @@ const Role = styled.p`
   place-content: center;
   height: fit-content;
 `;
-
 const NameTag = styled.h1`
   position: relative;
   font-size: var(--fs-9);
@@ -186,23 +182,22 @@ const FooterHolder = styled.footer`
 `;
 
 function Header() {
-  const headerRef = useRef(null);
-  useEffect(() => {
-    gsap.to(headerRef.current, {
-      opacity: 0,
-      delay: 3.4,
-    });
-  });
   return (
-    <HeaderHolder ref={headerRef}>
+    <HeaderHolder>
       <Container>
         <Scene />
         <TextContainer>
-          <Role>WEB & MOBILE DEVELOPER</Role>
-          <NameTag>
-            TEMITOPE <span>ABOLAJI</span>
-          </NameTag>
-          <OpenForWorkButton />
+          <SlideUpAnimation delay={3.17}>
+            <Role>WEB & MOBILE DEVELOPER</Role>
+          </SlideUpAnimation>
+          <SlideUpAnimation delay={3.25}>
+            <NameTag>
+              TEMITOPE <span>ABOLAJI</span>
+            </NameTag>
+          </SlideUpAnimation>
+          <SlideUpAnimation delay={3.3}>
+            <OpenForWorkButton />
+          </SlideUpAnimation>
         </TextContainer>
       </Container>
     </HeaderHolder>
@@ -211,13 +206,15 @@ function Header() {
 
 function HomeAbout() {
   return (
-    <AboutHolder>
-      <p>
-        Hi, I’m <PillImage /> Tope <Peace />, a software developer <World />{" "}
-        practicing and building quality solutions <FingerPrint /> for the past 5
-        years.
-      </p>
-    </AboutHolder>
+    <SlideUpAnimation delay={3.4}>
+      <AboutHolder>
+        <p>
+          Hi, I’m <PillImage /> Tope <Peace />, a software developer <World />{" "}
+          practicing and building quality solutions <FingerPrint /> for the past
+          5 years.
+        </p>
+      </AboutHolder>
+    </SlideUpAnimation>
   );
 }
 
