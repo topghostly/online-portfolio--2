@@ -23,27 +23,47 @@ function Loader() {
   // Animation Logic
   const lineRef = useRef(null);
   const textRef = useRef(null);
+  const containerRef = useRef(null);
 
   useEffect(() => {
     const tl = gsap.timeline({});
     tl.to(lineRef.current, {
       delay: 2,
-      width: "70vw",
-      ease: "power3.out",
-      duration: 1.5,
-    }).fromTo(
-      textRef.current.querySelectorAll("span"),
-      {
-        y: "110%",
-      },
-      {
-        y: 0,
-        stagger: 0.06,
-      }
-    );
+      width: "50vw",
+      ease: "back.out(1.7)",
+      duration: 1.7,
+    })
+      .fromTo(
+        textRef.current.querySelectorAll("span"),
+        {
+          y: "110%",
+        },
+        {
+          y: 0,
+          stagger: 0.06,
+        },
+        "-=1.5"
+      )
+      .to(textRef.current.querySelectorAll("span"), {
+        y: "-110%",
+        delay: 1,
+        stagger: -0.06,
+      })
+      .to(
+        containerRef.current,
+        {
+          opacity: 0,
+          onComplete: () => {
+            gsap.to(containerRef.current, {
+              display: "none",
+            });
+          },
+        },
+        "<0.2"
+      );
   });
   return (
-    <LoaderContainer>
+    <LoaderContainer ref={containerRef}>
       <Content>
         <Text ref={textRef}>
           <span>THE</span>
