@@ -4,6 +4,7 @@ import gsap from "gsap";
 
 function SlideUpAnimation({ children, delay }) {
   const animationRef = useRef(null);
+
   // Slide Animation logic
   useEffect(() => {
     gsap.to(animationRef.current, {
