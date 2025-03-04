@@ -65,6 +65,7 @@ const Placholder = styled.div`
   color: black;
   place-content: center;
 `;
+
 const HoverHolder = styled.div`
   position: relative;
   width: fit-content;

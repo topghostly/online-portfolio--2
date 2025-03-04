@@ -7,7 +7,6 @@ function Sublime() {
   return (
     <Container>
       <Holder>
-        {" "}
         <RevolvingLogo color={"white"} background={"none"} />
         <img src={img} alt="Sublime designs and constructions website" />
       </Holder>
