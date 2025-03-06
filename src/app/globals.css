@@ -11,13 +11,13 @@
 
 @font-face {
   font-family: "Satoshi-italic";
-  src: url(/public/fonts/Satoshi-Italic.woff2) format("woff2");
+  src: url(/fonts/Satoshi-Italic.woff2) format("woff2");
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
   font-family: "Gobold-cut";
-  src: url(/public/fonts/Gobold-Hollow-Bold.woff2) format("woff2");
+  src: url(/fonts/Gobold-cut.woff2) format("woff2");
   font-style: normal;
 }
 

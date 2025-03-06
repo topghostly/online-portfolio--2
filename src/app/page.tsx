@@ -32,7 +32,7 @@ export default function Home() {
       <Service /> {/* Has a grid-2 layout */}
       <Separator className="my-7" />
       <div className="w-full text-8xl font-bold overflow-hidden">
-        <InfinityScroll text="Work Work Work Work Work Work Work" />
+        <InfinityScroll text="WORK WORK WORK WORK WORK WORK WORK" />
       </div>
       <Separator className="my-7" />
       <Resume />

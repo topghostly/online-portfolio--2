@@ -50,7 +50,13 @@ export const SectionTitle: React.FC<SectionTitleTypes> = ({ children }) => {
       }}
       className="sm:order-none sub font-bold order-1 parent"
     >
-      <p className="h-fit" ref={sectionNameRef}>
+      <p
+        className="h-fit"
+        ref={sectionNameRef}
+        style={{
+          fontFamily: "var(--font-gobold)",
+        }}
+      >
         {children}
       </p>
     </div>
