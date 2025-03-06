@@ -22,7 +22,7 @@
 }
 
 :root {
-  --theme: rgb(244, 173, 6);
+  --theme: rgb(196, 107, 8);
   --card: rgba(244, 243, 241, 1);
   --card-foreground: rgba(31, 30, 35, 1);
   --popover: rgba(244, 243, 241, 1);
@@ -63,7 +63,7 @@
 }
 
 .dark {
-  --theme: rgb(244, 173, 6);
+  --theme: rgb(196, 107, 8);
   --background: rgba(31, 30, 35, 1);
   --foreground: rgba(244, 243, 241, 1);
   --card: rgba(31, 30, 35, 1);

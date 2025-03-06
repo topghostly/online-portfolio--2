@@ -3,15 +3,15 @@
 export const ImageSection: React.FC = () => {
   return (
     <div
-      style={{ width: "100%", aspectRatio: "13/7.9", backgroundColor: "red" }}
-      className="relative"
-    >
-      {/* <Image
-        src={"/images/Portfolio Image.jpg"}
-        alt="david's picture"
-        width={1309}
-        height={799}
-      /> */}
-    </div>
+      style={{
+        width: "100%",
+        backgroundColor: "red",
+        backgroundImage: "url('/images/Portfolio-Image.jpg')",
+        backgroundPosition: "center 100%",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
+      className="relative aspect-[13/14] sm:aspect-[13/10] md:aspect-[13/7]"
+    ></div>
   );
 };
