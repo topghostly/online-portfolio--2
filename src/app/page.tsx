@@ -11,7 +11,7 @@ import { Service } from "@/components/page/service-section";
 import { ThemeInfo } from "@/components/page/theme-info";
 import { InfinityScroll } from "@/components/ui/infinity-scroll";
 import { Separator } from "@/components/ui/separator";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export default function Home() {
   /* INITIALISE LOCOMOTIVE SCROLL */
@@ -22,26 +22,32 @@ export default function Home() {
       new LocomotiveScroll();
     })();
   }, []);
+
+  /* ANIMATION REFS */
+  const textRef = useRef(null); // LOADER TEXT
+  const containerRef = useRef(null); // LOADER CONTAINER
   return (
-    // <Loader />
-    <div className=" max-w-[1280px] mx-auto px-2 flex flex-col gap-[0rem] items-center justify-items-center min-h-screen pb-2 pt-7">
-      <ThemeInfo />
-      <NameIntro />
-      <ImageSection />
-      <Separator className="my-7" />
-      <About /> {/* Has a grid-2 layout */}
-      <Separator className="my-7" />
-      <Service /> {/* Has a grid-2 layout */}
-      <Separator className="my-7" />
-      <div className="w-full text-8xl font-bold overflow-hidden">
-        <InfinityScroll text="WORK WORK WORK WORK WORK WORK WORK" />
+    <>
+      <Loader ref={[textRef, containerRef]} />
+      <div className=" max-w-[1280px] mx-auto px-2 flex flex-col gap-[0rem] items-center justify-items-center min-h-screen pb-2 pt-7">
+        <ThemeInfo />
+        <NameIntro />
+        <ImageSection />
+        <Separator className="my-7" />
+        <About /> {/* Has a grid-2 layout */}
+        <Separator className="my-7" />
+        <Service /> {/* Has a grid-2 layout */}
+        <Separator className="my-7" />
+        <div className="w-full text-8xl font-bold overflow-hidden">
+          <InfinityScroll text="WORK WORK WORK WORK WORK WORK WORK" />
+        </div>
+        <Separator className="my-7" />
+        <Resume />
+        <Separator className="my-7" />
+        <Featured />
+        <Separator className="my-7" />
+        <Footer />
       </div>
-      <Separator className="my-7" />
-      <Resume />
-      <Separator className="my-7" />
-      <Featured />
-      <Separator className="my-7" />
-      <Footer />
-    </div>
+    </>
   );
 }

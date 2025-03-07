@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import {
   stopScrolling,
@@ -8,10 +8,8 @@ import {
   loaderAnimation,
 } from "../animation/loader";
 
-const Loader = () => {
-  const textRef = useRef(null);
-  const containerRef = useRef(null);
-
+const Loader = ({ ref }) => {
+  const [textRef, containerRef] = ref;
   useEffect(() => {
     stopScrolling();
     loaderAnimation(textRef, containerRef);
