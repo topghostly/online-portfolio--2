@@ -3,6 +3,7 @@
 import { SlideTypes } from "@/types/layout";
 import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
+import Image from "next/image";
 
 export const Test: React.FC<SlideTypes> = ({ text }) => {
   let xPercent = 0;
@@ -28,18 +29,44 @@ export const Test: React.FC<SlideTypes> = ({ text }) => {
     requestAnimationFrame(animation);
   });
   return (
-    <div className="max-w-[200px] h-full overflow-x-hidden">
-      <div className="w-full font-bold overflow-hidden flex gap-1.5">
-        <p className="flex gap-1.5" ref={firstTextRef}>
+    <div className="max-w-[169px] h-full overflow-x-hidden">
+      <div
+        className="w-full font-bold overflow-hidden flex gap-1.5"
+        style={{
+          fontFamily: "var(--font-gobold)",
+          height: "100%",
+          display: "flex",
+          alignItems: "center",
+          fontSize: "22px",
+        }}
+      >
+        <div className="flex gap-1.5 uppercase" ref={firstTextRef}>
           {Array.from({ length: 10 }).map((_, index) => (
-            <span key={index}>{text}</span>
+            <div key={index} className="flex gap-3">
+              <p>{text}</p>
+              <Image
+                src={"/images/svg/ico-01.svg"}
+                width={20}
+                height={20}
+                alt="images"
+              />
+            </div>
           ))}
-        </p>
-        <p className="flex gap-1.5" ref={secondTextRef}>
+        </div>
+        <div className="flex gap-1.5 uppercase" ref={secondTextRef}>
           {Array.from({ length: 10 }).map((_, index) => (
-            <span key={index}>{text}</span>
+            <div key={index} className="flex">
+              <p>{text}</p>
+              <Image
+                src={"/images/svg/ico-01.svg"}
+                width={20}
+                height={20}
+                alt="images"
+                className="ml-2"
+              />
+            </div>
           ))}
-        </p>
+        </div>
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import { Separator } from "../ui/separator";
 export const Service: React.FC = () => {
   return (
     <section className="flex flex-col sm:grid sm:grid-cols-[0.2fr_2px_1fr]  lg:grid-cols-[0.3fr_2px_1fr] gap-7 w-full">
-      <SectionTitle>(What I do)</SectionTitle>
+      {/* <SectionTitle>(What I do)</SectionTitle> */}
       <Separator orientation="vertical" className="hidden sm:block" />
       <div className="flex flex-col gap-7">
         <div className="flex flex-col sm:grid sm:grid-cols-[1fr_2px_1fr] gap-7">

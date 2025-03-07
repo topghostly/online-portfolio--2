@@ -36,7 +36,6 @@ const InfoHoder = () => {
           </p>
         </div>
         <div className="relative text-[8px] text-center">
-          {/* <Test text="About" /> */}
           David is a Full-Stack Developer focused on React, Node.js, and ML.
         </div>
       </div>

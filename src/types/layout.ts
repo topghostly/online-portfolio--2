@@ -3,7 +3,8 @@ export interface InfinityScrollTypes {
 }
 
 export interface SectionTitleTypes {
-  children: string;
+  text: string;
+  imagepath: string;
 }
 
 export interface SlideTypes {
