@@ -1,10 +1,44 @@
-import { Globe } from "lucide-react";
+import { Copyright, Globe } from "lucide-react";
+import { Test } from "../ui/test";
+import Image from "next/image";
 
 const InfoHoder = () => {
   return (
-    <div className="w-[250px] h-[60px] grid grid-cols-[0.4fr_1fr] border border-foreground">
-      <div className="grid place-content-center h-full border border-r-foreground w-full">
-        <Globe size={40} strokeWidth={0.6} />
+    <div className="h-[50px] grid grid-cols-[50px_200px] border border-foreground">
+      <div className="grid relative place-content-center h-full border border-r-foreground w-full">
+        {/* <Globe size={40} strokeWidth={0.6} /> */}
+        <Image
+          src={"/images/svg/ico-01.svg"}
+          alt="logo svg icon"
+          width={35}
+          height={35}
+        />
+      </div>
+      <div className="grid grid-rows-[0.9fr_1fr]">
+        <div className="border border-b-foreground">
+          <p
+            style={{
+              fontFamily: "var(--font-gobold)",
+              fontSize: "15px",
+              textTransform: "uppercase",
+              textAlign: "center",
+              display: "flex",
+              alignItems: "center",
+              gap: "5px",
+              justifyContent: "center",
+            }}
+          >
+            2025{" "}
+            <span>
+              <Copyright size={15} />
+            </span>{" "}
+            All rights reserved
+          </p>
+        </div>
+        <div className="relative text-[8px] text-center">
+          {/* <Test text="About" /> */}
+          David is a Full-Stack Developer focused on React, Node.js, and ML.
+        </div>
       </div>
     </div>
   );

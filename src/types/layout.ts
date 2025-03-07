@@ -5,3 +5,7 @@ export interface InfinityScrollTypes {
 export interface SectionTitleTypes {
   children: string;
 }
+
+export interface SlideTypes {
+  text: string;
+}
