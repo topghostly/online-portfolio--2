@@ -4,7 +4,7 @@ import { Separator } from "../ui/separator";
 export const Featured: React.FC = () => {
   return (
     <section className="flex flex-col sm:grid sm:grid-cols-[0.2fr_2px_1fr]  lg:grid-cols-[0.3fr_2px_1fr] gap-7 w-full">
-      {/* <SectionTitle>(Featured Works)</SectionTitle> */}
+      <SectionTitle text="projects" imagepath="/images/svg/ico-04.svg" />
       <Separator orientation="vertical" className="hidden sm:block" />
       {/* Work holder div */}
       <div className="flex flex-col gap-7">

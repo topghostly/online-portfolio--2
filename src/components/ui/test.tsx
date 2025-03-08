@@ -21,7 +21,7 @@ export const Test: React.FC<SlideTypes> = ({ text }) => {
     }
     gsap.set(firstTextRef.current, { xPercent: xPercent });
     gsap.set(secondTextRef.current, { xPercent: xPercent });
-    xPercent -= 0.04;
+    xPercent -= 0.02;
     requestAnimationFrame(animation);
   };
 
@@ -42,28 +42,33 @@ export const Test: React.FC<SlideTypes> = ({ text }) => {
       >
         <div className="flex gap-1.5 uppercase" ref={firstTextRef}>
           {Array.from({ length: 10 }).map((_, index) => (
-            <div key={index} className="flex gap-3">
-              <p>{text}</p>
-              <Image
-                src={"/images/svg/ico-01.svg"}
-                width={20}
-                height={20}
-                alt="images"
-              />
+            <div key={index} className="flex gap-2 items-center">
+              <p className="whitespace-nowrap">{text}</p>
+              <div className="w-[20px] h-[20px]">
+                {" "}
+                <Image
+                  src={"/images/svg/ico-01.svg"}
+                  width={20}
+                  height={20}
+                  alt="images"
+                />
+              </div>
             </div>
           ))}
         </div>
         <div className="flex gap-1.5 uppercase" ref={secondTextRef}>
           {Array.from({ length: 10 }).map((_, index) => (
-            <div key={index} className="flex">
-              <p>{text}</p>
-              <Image
-                src={"/images/svg/ico-01.svg"}
-                width={20}
-                height={20}
-                alt="images"
-                className="ml-2"
-              />
+            <div key={index} className="flex gap-2 items-center">
+              <p className="whitespace-nowrap">{text}</p>
+              <div className="w-[20px] h-[20px]">
+                {" "}
+                <Image
+                  src={"/images/svg/ico-01.svg"}
+                  width={20}
+                  height={20}
+                  alt="images"
+                />
+              </div>
             </div>
           ))}
         </div>

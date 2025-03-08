@@ -53,7 +53,7 @@ export const Resume: React.FC = () => {
         {/* This is where the looping would end */}
       </div>
       <Separator orientation="vertical" className="hidden sm:block" />
-      {/* <SectionTitle>(Work Experience)</SectionTitle> */}
+      <SectionTitle text="work experience" imagepath="/images/svg/ico-02.svg" />
     </section>
   );
 };

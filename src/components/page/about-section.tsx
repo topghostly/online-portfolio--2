@@ -12,7 +12,7 @@ export const About: React.FC = () => {
         digital experiences.
       </h2>
       <Separator orientation="vertical" className="hidden sm:block" />
-      <SectionTitle text="About" imagepath="/images/svg/ico-03.svg" />
+      <SectionTitle text="About" imagepath="/images/svg/ico-05.svg" />
     </section>
   );
 };
