@@ -1,12 +1,10 @@
-import { Copyright, Globe } from "lucide-react";
-import { Test } from "../ui/test";
+import { Copyright } from "lucide-react";
 import Image from "next/image";
 
 const InfoHoder = () => {
   return (
     <div className="h-[50px] grid grid-cols-[50px_200px] border border-foreground">
-      <div className="grid relative place-content-center h-full border border-r-foreground w-full">
-        {/* <Globe size={40} strokeWidth={0.6} /> */}
+      <div className="grid relative place-content-center h-full border border-r-foreground border-b-foreground w-full">
         <Image
           src={"/images/svg/ico-01.svg"}
           alt="logo svg icon"
@@ -45,11 +43,9 @@ const InfoHoder = () => {
 
 export const Footer: React.FC = () => {
   return (
-    <>
-      <footer className="w-full pb-5 flex justify-between items-end">
-        <InfoHoder />
-        <p className="text-md font-bold">Code by Tope</p>
-      </footer>
-    </>
+    <footer className="w-full pb-5 flex justify-between items-end">
+      <InfoHoder />
+      <p className="text-md font-bold">Code by Tope</p>
+    </footer>
   );
 };

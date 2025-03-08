@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <>
       <Loader ref={[textRef, containerRef]} />
-      <div className=" max-w-[1280px] mx-auto px-2 flex flex-col gap-[0rem] items-center justify-items-center min-h-screen pb-2 pt-7">
+      <div className=" max-w-[1280px] mx-auto px-3 lg:px-0.5 flex flex-col gap-[0rem] items-center justify-items-center min-h-screen pb-2 pt-7">
         <ThemeInfo />
         <NameIntro />
         <ImageSection />
