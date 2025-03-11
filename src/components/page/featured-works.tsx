@@ -157,11 +157,10 @@ export const Featured: React.FC = () => {
             </div>
 
             <p>
-              A cutting-edge Lending-as-a-Service platform built with Next.js,
-              empowering businesses with seamless, scalable, and secure loan
-              management solutions. From instant credit decisions to automated
-              repayments, Doshpal simplifies lending with speed, precision, and
-              flexibility.
+              A Lending-as-a-Service platform built with Next.js, empowering
+              businesses with seamless, scalable, and secure loan management
+              solutions. From instant credit decisions to automated repayments,
+              Doshpal simplifies lending with speed, precision, and flexibility.
             </p>
           </div>
         </div>
