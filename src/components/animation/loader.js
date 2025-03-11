@@ -2,12 +2,10 @@ import gsap from "gsap";
 
 // Fuction to stop scrolling while loader is active
 export const stopScrolling = () => {
-  console.log("stop scrolling");
   document.body.style.overflow = "hidden";
 };
 
 export const enableScrolling = () => {
-  console.log("enable scrolling");
   document.body.style.overflow = "";
 };
 

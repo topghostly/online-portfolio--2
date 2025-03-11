@@ -18,6 +18,8 @@ export const SectionTitle: React.FC<SectionTitleTypes> = ({
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
+    if (!backgroundImageRef.current) return;
+
     const ctx = gsap.context(() => {
       gsap.to(backgroundImageRef.current, {
         duration: 10,
@@ -67,7 +69,7 @@ export const SectionTitle: React.FC<SectionTitleTypes> = ({
     //   </p>
     // </div>
 
-    <div className="h-[70px] w-[235px] grid grid-cols-[65px_170px] border border-foreground">
+    <div className="mx-auto sm:mx-0 h-[70px] w-[235px] grid grid-cols-[65px_170px] border border-foreground">
       <div className="grid relative place-content-center h-full border border-r-foreground w-full">
         <Image src={imagepath} alt="logo image" width={35} height={35} />
       </div>

@@ -43,9 +43,12 @@ const InfoHoder = () => {
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="w-full pb-5 flex justify-between items-end">
-      <InfoHoder />
-      <p className="text-md font-bold">Code by Tope</p>
+    <footer className="w-full pb-5 flex flex-col">
+      <div></div>
+      <div className="flex justify-between items-end">
+        <InfoHoder />
+        <p className="text-md font-bold">Code by Tope</p>
+      </div>
     </footer>
   );
 };
