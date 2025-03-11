@@ -34,9 +34,9 @@ export default function Home() {
         <NameIntro />
         <ImageSection />
         <Separator className="my-7" />
-        <About /> {/* Has a grid-2 layout */}
+        <About />
         <Separator className="my-7" />
-        <Service /> {/* Has a grid-2 layout */}
+        <Service />
         <Separator className="my-7" />
         <div className="w-full text-8xl font-bold overflow-hidden">
           <InfinityScroll text="WORK WORK WORK WORK WORK WORK WORK" />
