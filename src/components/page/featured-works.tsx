@@ -1,6 +1,6 @@
 import { SectionTitle } from "../ui/section-title";
 import { Separator } from "../ui/separator";
-import { ArrowDownRight, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 const Badge = ({ text }: { text: "Web App" | "Mobile App" | "Website" }) => {
   return (
