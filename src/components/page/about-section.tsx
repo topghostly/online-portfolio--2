@@ -4,7 +4,10 @@ import { SectionTitle } from "../ui/section-title";
 
 export const About: React.FC = () => {
   return (
-    <section className="flex flex-col sm:grid sm:grid-cols-[1fr_2px_0.3fr] lg:grid-cols-[1fr_2px_0.5fr] gap-7 w-full relative">
+    <section
+      className="flex flex-col sm:grid sm:grid-cols-[1fr_2px_0.3fr] lg:grid-cols-[1fr_2px_0.5fr] gap-7 w-full relative"
+      id="about-section"
+    >
       <h2 className="sm:order-none text-4xl md:text-6xl font-bold order-2 text-center sm:text-left">
         As a software developer, <br className="hidden md:block" /> I build
         <span className="text-[var(--theme)]"> high-quality</span> and

@@ -4,7 +4,7 @@ import { Separator } from "../ui/separator";
 
 export const Resume: React.FC = () => {
   return (
-    <section className="flex flex-col sm:grid sm:grid-cols-[1fr_2px_0.3fr] lg:grid-cols-[1fr_2px_0.5fr] gap-7 w-full">
+    <section className="flex flex-col sm:grid sm:grid-cols-[1fr_2px_0.3fr] lg:grid-cols-[1fr_2px_0.5fr] gap-7 w-full" id="resume-section">
       <div className="flex flex-col sm:order-none order-2">
         {/* This is where the looping would start */}
         {resumeData.map((data, index) => (

@@ -1,5 +1,7 @@
 import { Copyright } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+import { SOCIALS } from "../ui/menu-box";
 
 const InfoHoder = () => {
   return (
@@ -43,11 +45,24 @@ const InfoHoder = () => {
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="w-full pb-5 flex flex-col">
-      <div></div>
-      <div className="flex justify-between items-end">
+    <footer
+      className="w-full pb-5"
+      style={{
+        fontFamily: "var(--font-gobold)",
+      }}
+    >
+      <div className="flex-col gap-4  md:flex-row flex md:justify-between items-center">
         <InfoHoder />
-        <p className="text-md font-bold">Code by Tope</p>
+        <ul className="flex items-center gap-7 text-foreground">
+          {SOCIALS.map((s, index) => {
+            return (
+              <li key={index}>
+                <Link href={"#"}>{s.name}</Link>
+              </li>
+            );
+          })}
+        </ul>
+        <p className="text-md font-bold">CODE BY TOPE</p>
       </div>
     </footer>
   );

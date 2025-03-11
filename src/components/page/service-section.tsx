@@ -3,7 +3,10 @@ import { Separator } from "../ui/separator";
 
 export const Service: React.FC = () => {
   return (
-    <section className="flex flex-col sm:grid sm:grid-cols-[0.2fr_2px_1fr]  lg:grid-cols-[0.3fr_2px_1fr] gap-7 w-full">
+    <section
+      className="flex flex-col sm:grid sm:grid-cols-[0.2fr_2px_1fr]  lg:grid-cols-[0.3fr_2px_1fr] gap-7 w-full"
+      id="service-section"
+    >
       <SectionTitle text="services" imagepath="/images/svg/ico-03.svg" />
       <Separator orientation="vertical" className="hidden sm:block" />
       <div className="flex flex-col gap-7">

@@ -9,9 +9,19 @@ const ModeSwitch: React.FC = () => {
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="p-2.5 rounded-full bg-foreground text-background"
+      className="text-background"
     >
-      {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
+      {theme === "dark" ? (
+        <p className="flex gap-3 items-center">
+          Light Mode
+          <Sun size={20} />
+        </p>
+      ) : (
+        <p className="flex gap-3 items-center">
+          Dark Mode
+          <Moon size={20} />
+        </p>
+      )}
     </button>
   );
 };
