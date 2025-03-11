@@ -18,7 +18,7 @@ const LinkHolder = ({ text, href }: { text: string; href: string }) => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div className="font-semibold text-[0.8rem] h-[30px] bg-foreground text-background w-[95px] grid grid-cols-[30px_1fr] group cursor-pointer">
+      <div className="font-semibold text-[0.8rem] h-[30px] bg-foreground text-background w-[110px] grid grid-cols-[30px_1fr] group cursor-pointer">
         <div className="w-full bg-background border border-foreground flex flex-col gap-0.5 justify-center items-center group">
           <ArrowUpRight color="var(--theme)" />
         </div>
@@ -133,6 +133,36 @@ export const Featured: React.FC = () => {
                 creativity, and note-taking anytime, anywhere.
               </p>
             </div>
+          </div>
+        </div>
+        <Separator className="hidden sm:block" />
+        <div className="flex flex-col gap-7 relative">
+          <LinkHolder
+            text="PREVIEW"
+            href="https://doshpal-next-site-pitch.vercel.app/"
+          />
+          <div
+            className="w-full aspect-[16/9] rounded-md"
+            style={{
+              backgroundImage: "url('/images/doshpal.png')",
+              backgroundPosition: "center 0%",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+            }}
+          />
+          <div className="flex flex-col sm:grid sm:grid-cols-[150px_1fr] gap-2">
+            <div className="flex flex-col">
+              <Badge text="Website" />
+              <h3 className="text-2xl font-bold">DoshPal</h3>
+            </div>
+
+            <p>
+              A cutting-edge Lending-as-a-Service platform built with Next.js,
+              empowering businesses with seamless, scalable, and secure loan
+              management solutions. From instant credit decisions to automated
+              repayments, Doshpal simplifies lending with speed, precision, and
+              flexibility.
+            </p>
           </div>
         </div>
       </div>

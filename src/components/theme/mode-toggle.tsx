@@ -12,12 +12,12 @@ const ModeSwitch: React.FC = () => {
       className="text-background"
     >
       {theme === "dark" ? (
-        <p className="flex gap-3 items-center">
+        <p className="flex gap-3 items-center cursor-pointer">
           Light Mode
           <Sun size={20} />
         </p>
       ) : (
-        <p className="flex gap-3 items-center">
+        <p className="flex gap-3 items-center cursor-pointer">
           Dark Mode
           <Moon size={20} />
         </p>

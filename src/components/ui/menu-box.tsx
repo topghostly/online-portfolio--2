@@ -138,7 +138,7 @@ export const MenuBox = ({ open }: { open: boolean }) => {
           <a href="#resume-section">Work Experience</a>
         </MenuHolder>
         <MenuHolder>
-          <a href="#featured-section">Pro jects</a>
+          <a href="#featured-section">Projects</a>
         </MenuHolder>
         <MenuHolder>
           <a

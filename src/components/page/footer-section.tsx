@@ -1,4 +1,4 @@
-import { Copyright } from "lucide-react";
+import { Copyright, Swords } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { SOCIALS } from "../ui/menu-box";
@@ -62,7 +62,11 @@ export const Footer: React.FC = () => {
             );
           })}
         </ul>
-        <p className="text-md font-bold">CODE BY TOPE</p>
+        <p className="text-md font-bold opacity-40 flex gap-2">
+          {" "}
+          <Swords />
+          CODE BY TOPE
+        </p>
       </div>
     </footer>
   );
