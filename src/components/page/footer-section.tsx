@@ -70,7 +70,9 @@ export const Footer: React.FC = () => {
           {SOCIALS.map((s, index) => {
             return (
               <li key={index}>
-                <Link href={"#"}>{s.icons}</Link>
+                <Link href={s.href} target="_blank">
+                  {s.icons}
+                </Link>
               </li>
             );
           })}

@@ -10,18 +10,22 @@ export const SOCIALS = [
   {
     name: "GITHUB",
     icons: <Github size={18} />,
+    href: "https://github.com/topghostly",
   },
   {
     name: "TWITTER",
     icons: <Twitter size={18} />,
+    href: "https://x.com/theRealAyinla",
   },
   {
     name: "LINKEDIN",
     icons: <Linkedin size={18} />,
+    href: "https://www.linkedin.com/in/tdbolaji/",
   },
   {
     name: "MAIL",
     icons: <Mail size={18} />,
+    href: "mailto:td.bolaji@gmail.com",
   },
 ];
 
@@ -157,7 +161,12 @@ export const MenuBox = ({ open }: { open: boolean }) => {
         <div className="grid grid-cols-2 mt-3 gap-2 text-[12px] font-thin px-3 social-link">
           {SOCIALS.map((s, index) => {
             return (
-              <Link href={"#"} key={index} className="opacity-0">
+              <Link
+                href={s.href}
+                key={index}
+                className="opacity-0"
+                target="_blank"
+              >
                 {s.name}
               </Link>
             );
