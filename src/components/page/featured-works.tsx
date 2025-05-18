@@ -65,7 +65,7 @@ export const LinkHolder: React.FC<LinkHolderProps> = ({ text, href }) => {
     <a
       ref={containerRef}
       href={href}
-      className="absolute top-3 left-3"
+      // className="absolute top-3 left-3"
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -100,41 +100,50 @@ export const Featured: React.FC = () => {
       {/* Work holder div */}
       <div className="flex flex-col gap-14 sm:gap-7">
         <div className="flex flex-col gap-7 relative">
-          <LinkHolder
-            text="GITHUB"
-            href="https://github.com/topghostly/next-AI-video-editor"
-          />
+          <div className="absolute w-full top-3 px-3 flex justify-between">
+            <LinkHolder
+              text="GITHUB"
+              href="https://github.com/topghostly/glyph-cms"
+            />
+            <LinkHolder text="PREVIEW" href="https://www.getglyph.app/" />
+          </div>
+
           <div
-            className="w-full aspect-[16/9] rounded-md"
-            style={{
-              backgroundImage: "url('/images/reelCraft.png')",
-              backgroundPosition: "center 0%",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-            }}
+            className={`
+    w-full aspect-[16/9] rounded-md
+    bg-[url('/images/glyph.png')]
+    hover:bg-[url('/images/glyph-hover.png')]
+    bg-center bg-cover bg-no-repeat
+    transition-all duration-250
+  `}
           />
           <div className="flex flex-col sm:grid sm:grid-cols-[150px_1fr] gap-2">
             <div className="flex flex-col">
               <Badge text="Web App" />
-              <h3 className="text-2xl font-bold">ReelCraft</h3>
+              <h3 className="text-2xl font-bold">Glyph</h3>
             </div>
 
             <p>
-              A next-gen AI-powered image and video editing app that enhances
-              creativity with smart tools. From automatic background removal to
-              style transfers and real-time video enhancements, it streamlines
-              editing like never before. Designed for speed, precision, and ease
-              of use.
+              Offline-first CMS for seamless storytelling: draft anywhere, embed
+              rich media and tags offline, then sync instantly to the web.
+              Includes a developer-friendly SDK for easy integration and custom
+              workflows.
             </p>
           </div>
         </div>
         <Separator className="hidden sm:block" />
         <div className="flex flex-col sm:grid sm:grid-cols-[1fr_2px_1fr] gap-14 sm:gap-7 relative">
-          <LinkHolder
-            text="GITHUB"
-            href="https://github.com/topghostly/Echonote-react-native-app"
-          />
-          <div className="flex flex-col gap-7">
+          <div className="flex flex-col gap-7 relative">
+            <div className="absolute w-full top-3 px-3 flex justify-between">
+              <LinkHolder
+                text="GITHUB"
+                href="https://github.com/topghostly/Echonote-react-native-app"
+              />
+              <LinkHolder
+                text="ANDROID"
+                href="https://drive.google.com/file/d/1FLgpAbNoK-XJ9x9ssS8LaGv6t-eg6OME/view?usp=sharing"
+              />
+            </div>
             <div
               className="w-full aspect-[9/10.5] rounded-md"
               style={{
@@ -159,11 +168,18 @@ export const Featured: React.FC = () => {
             </div>
           </div>
           <Separator orientation="vertical" className="hidden sm:block" />
-          <div className="flex flex-col gap-7 relative">
-            <LinkHolder
-              text="GITHUB"
-              href="https://github.com/topghostly/backDropper-app"
-            />
+          <div className="flex flex-col gap-7 relative ">
+            <div className="absolute w-full top-3 px-3 flex justify-between">
+              <LinkHolder
+                text="GITHUB"
+                href="https://github.com/topghostly/backDropper-app"
+              />
+              <LinkHolder
+                text="ANDROID"
+                href="https://drive.google.com/file/d/1lexWO5wUMZME3XsH7wrRHUQxXOpIQLYU/view?usp=sharing"
+              />
+            </div>
+
             <div
               className="w-full aspect-[9/10.5] rounded-md"
               style={{
@@ -190,18 +206,21 @@ export const Featured: React.FC = () => {
         </div>
         <Separator className="hidden sm:block" />
         <div className="flex flex-col gap-7 relative">
-          <LinkHolder
-            text="PREVIEW"
-            href="https://doshpal-next-site-pitch.vercel.app/"
-          />
+          <div className="absolute w-full top-3 px-3">
+            <LinkHolder
+              text="PREVIEW"
+              href="https://doshpal-next-site-pitch.vercel.app/"
+            />
+          </div>
+
           <div
-            className="w-full aspect-[16/9] rounded-md"
-            style={{
-              backgroundImage: "url('/images/doshpal.png')",
-              backgroundPosition: "center 0%",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-            }}
+            className={`
+    w-full aspect-[16/9] rounded-md
+    bg-[url('/images/payverge.png')]
+    hover:bg-[url('/images/payverge-hover.png')]
+    bg-center bg-cover bg-no-repeat
+    transition-all duration-250
+  `}
           />
           <div className="flex flex-col sm:grid sm:grid-cols-[150px_1fr] gap-2">
             <div className="flex flex-col">
@@ -215,6 +234,43 @@ export const Featured: React.FC = () => {
               solutions. From instant credit decisions to automated repayments,
               Payverge simplifies lending with speed, precision, and
               flexibility.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-7 relative">
+          <div className="absolute w-full top-3 px-3 flex justify-between">
+            <LinkHolder
+              text="GITHUB"
+              href="https://github.com/topghostly/next-AI-video-editor"
+            />
+            {/* <LinkHolder
+              text="PREVIEW"
+              href="https://github.com/topghostly/next-AI-video-editor"
+            /> */}
+          </div>
+
+          <div
+            className={`
+    w-full aspect-[16/9] rounded-md
+    bg-[url('/images/reelcraft.png')]
+    hover:bg-[url('/images/reelcraft-hover.png')]
+    bg-center bg-cover bg-no-repeat
+    transition-all duration-250
+  `}
+          />
+          <div className="flex flex-col sm:grid sm:grid-cols-[150px_1fr] gap-2">
+            <div className="flex flex-col">
+              <Badge text="Web App" />
+              <h3 className="text-2xl font-bold">ReelCraft</h3>
+            </div>
+
+            <p>
+              A next-gen AI-powered image and video editing app that enhances
+              creativity with smart tools. From automatic background removal to
+              style transfers and real-time video enhancements, it streamlines
+              editing like never before. Designed for speed, precision, and ease
+              of use.
             </p>
           </div>
         </div>
