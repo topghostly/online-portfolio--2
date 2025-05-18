@@ -153,14 +153,15 @@ export const Featured: React.FC = () => {
           <div className="flex flex-col sm:grid sm:grid-cols-[150px_1fr] gap-2">
             <div className="flex flex-col">
               <Badge text="Website" />
-              <h3 className="text-2xl font-bold">DoshPal</h3>
+              <h3 className="text-2xl font-bold">Payverge</h3>
             </div>
 
             <p>
               A Lending-as-a-Service platform built with Next.js, empowering
               businesses with seamless, scalable, and secure loan management
               solutions. From instant credit decisions to automated repayments,
-              Doshpal simplifies lending with speed, precision, and flexibility.
+              Payverge simplifies lending with speed, precision, and
+              flexibility.
             </p>
           </div>
         </div>

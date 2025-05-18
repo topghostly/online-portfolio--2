@@ -30,7 +30,15 @@ export const ThemeInfo: React.FC = () => {
   }, [open]);
   return (
     <div className="fixed top-3 w-full z-[300] h-fit max-w-[1280px] mx-auto px-3 lg:px-0.5">
-      <div className="w-full flex justify-end gap-2 mb-7 md:mb-2 relative ">
+      {open && (
+        <div
+          className="absolute w-full h-[100vh] opacity-0 bg-red-500 z-0"
+          onClick={() => {
+            setopen(false);
+          }}
+        />
+      )}
+      <div className="w-full flex justify-end gap-2 mb-7 md:mb-2 relative z-10">
         <MenuBox open={open} />
         <div
           className="font-semibold text-[0.8rem] h-[30px] bg-foreground text-background w-[90px] grid grid-cols-[30px_1fr] group cursor-pointer"

@@ -2,6 +2,22 @@ import { ResumeDataTypes } from "@/types/resume";
 
 export const resumeData: ResumeDataTypes[] = [
   {
+    companyName: "OwoHQ",
+    role: "WEB DEVELOPER",
+    responsibilities:
+      "Developed and implemented a fully functional Admin Dashboard for internal management with dynamic tables, filtering, pagination, and user role controls. Migrated design specifications into a responsive, scalable React-based architecture with clean state management and modular components.",
+    contributions: [
+      "Designed and built an Admin Dashboard featuring dynamic tables, filtering, pagination, and role-based access controls.",
+      "Implemented clean state management and modular React components to ensure scalability and maintainability.",
+      "Collaborated with designers and stakeholders to translate Figma specs into pixel-perfect, responsive UI.",
+    ],
+    results: [
+      "Enabled real-time internal data management, reducing manual reporting time and improving decision-making speed.",
+      "Enhanced system scalability and performance, supporting future feature integrations with minimal refactoring.",
+      "Improved developer productivity through a modular codebase and clear component architecture.",
+    ],
+  },
+  {
     companyName: "Sublime Designs and Construction",
     role: "FULLSTACK DEVELOPER",
     responsibilities:

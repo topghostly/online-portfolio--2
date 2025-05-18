@@ -24,11 +24,11 @@ export default function Home() {
   }, []);
 
   /* ANIMATION REFS */
-  const textRef = useRef(null); // LOADER TEXT
-  const containerRef = useRef(null); // LOADER CONTAINER
+
   return (
     <>
-      <Loader ref={[textRef, containerRef]} />
+      <Loader />
+      {/* <Loader ref={[textRef, containerRef]} /> */}
       <div className=" max-w-[1280px] mx-auto px-3 lg:px-0.5 flex flex-col gap-[0rem] items-center justify-items-center min-h-screen pb-2 pt-12">
         <ThemeInfo />
         <NameIntro />

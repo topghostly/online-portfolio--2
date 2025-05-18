@@ -3,20 +3,25 @@ import { ReactNode, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import ModeSwitch from "../theme/mode-toggle";
 import Link from "next/link";
+import { Github, icons, Linkedin, Mail, Twitter } from "lucide-react";
 
 /* SOCIAL MEDIA DATA */
 export const SOCIALS = [
   {
     name: "GITHUB",
+    icons: <Github />,
   },
   {
     name: "TWITTER",
+    icons: <Twitter />,
   },
   {
     name: "LINKEDIN",
+    icons: <Linkedin />,
   },
   {
     name: "MAIL",
+    icons: <Mail />,
   },
 ];
 
