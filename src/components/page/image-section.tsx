@@ -5,7 +5,7 @@ export const ImageSection: React.FC = () => {
     <div
       style={{
         width: "100%",
-        backgroundImage: "url('/images/Portfolio-Image.jpg')",
+        backgroundImage: "url('/images/Portfolio-Image.webp')",
         backgroundPosition: "center 100%",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",

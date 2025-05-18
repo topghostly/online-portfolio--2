@@ -111,8 +111,8 @@ export const Featured: React.FC = () => {
           <div
             className={`
     w-full aspect-[16/9] rounded-md
-    bg-[url('/images/glyph.png')]
-    hover:bg-[url('/images/glyph-hover.png')]
+    bg-[url('/images/glyph.webp')]
+    hover:bg-[url('/images/glyph-hover.webp')]
     bg-center bg-cover bg-no-repeat
     transition-all duration-250
   `}
@@ -147,7 +147,7 @@ export const Featured: React.FC = () => {
             <div
               className="w-full aspect-[9/10.5] rounded-md"
               style={{
-                backgroundImage: "url('/images/EchoNote.png')",
+                backgroundImage: "url('/images/EchoNote.webp')",
                 backgroundPosition: "center 0%",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
@@ -183,7 +183,7 @@ export const Featured: React.FC = () => {
             <div
               className="w-full aspect-[9/10.5] rounded-md"
               style={{
-                backgroundImage: "url('/images/imageRaft.png')",
+                backgroundImage: "url('/images/imageRaft.webp')",
                 backgroundPosition: "center 0%",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
@@ -216,8 +216,8 @@ export const Featured: React.FC = () => {
           <div
             className={`
     w-full aspect-[16/9] rounded-md
-    bg-[url('/images/payverge.png')]
-    hover:bg-[url('/images/payverge-hover.png')]
+    bg-[url('/images/payverge.webp')]
+    hover:bg-[url('/images/payverge-hover.webp')]
     bg-center bg-cover bg-no-repeat
     transition-all duration-250
   `}
@@ -253,8 +253,8 @@ export const Featured: React.FC = () => {
           <div
             className={`
     w-full aspect-[16/9] rounded-md
-    bg-[url('/images/reelcraft.png')]
-    hover:bg-[url('/images/reelcraft-hover.png')]
+    bg-[url('/images/reelcraft.webp')]
+    hover:bg-[url('/images/reelcraft-hover.webp')]
     bg-center bg-cover bg-no-repeat
     transition-all duration-250
   `}
