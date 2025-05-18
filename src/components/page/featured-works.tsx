@@ -1,6 +1,16 @@
+"use client";
+
 import { SectionTitle } from "../ui/section-title";
 import { Separator } from "../ui/separator";
 import { ArrowUpRight } from "lucide-react";
+
+import React, { useRef, useEffect } from "react";
+import gsap from "gsap";
+
+interface LinkHolderProps {
+  text: string;
+  href: string;
+}
 
 const Badge = ({ text }: { text: "Web App" | "Mobile App" | "Website" }) => {
   return (
@@ -10,17 +20,60 @@ const Badge = ({ text }: { text: "Web App" | "Mobile App" | "Website" }) => {
   );
 };
 
-const LinkHolder = ({ text, href }: { text: string; href: string }) => {
+export const LinkHolder: React.FC<LinkHolderProps> = ({ text, href }) => {
+  const containerRef = useRef<HTMLAnchorElement>(null);
+  const arrowRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!containerRef.current || !arrowRef.current) return;
+
+    // build the hover timeline, but leave it paused
+    const tl = gsap.timeline({ paused: true });
+    // 1) shoot arrow up/right
+    tl.to(arrowRef.current, {
+      x: 20,
+      y: -20,
+      duration: 0.15,
+      delay: 0.1,
+      ease: "power4.in",
+    })
+      // 2) immediately teleport arrow to bottom/left outside
+      .set(arrowRef.current, { x: -20, y: 20 })
+      // 3) slide arrow back to center
+      .to(arrowRef.current, {
+        x: 0,
+        y: 0,
+        duration: 0.15,
+        ease: "power4.out",
+      });
+
+    const onEnter = () => tl.play(0);
+    const onLeave = () => tl.reverse();
+
+    const el = containerRef.current;
+    el.addEventListener("mouseenter", onEnter);
+    el.addEventListener("mouseleave", onLeave);
+
+    return () => {
+      el.removeEventListener("mouseenter", onEnter);
+      el.removeEventListener("mouseleave", onLeave);
+      tl.kill();
+    };
+  }, []);
+
   return (
     <a
+      ref={containerRef}
       href={href}
       className="absolute top-3 left-3"
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div className="font-semibold text-[0.8rem] h-[30px] bg-foreground text-background w-[110px] grid grid-cols-[30px_1fr] group cursor-pointer">
-        <div className="w-full bg-background border border-foreground flex flex-col gap-0.5 justify-center items-center group">
-          <ArrowUpRight color="var(--theme)" />
+      <div className="font-semibold text-[0.8rem] h-[30px] bg-foreground text-background w-[110px] grid grid-cols-[30px_1fr] cursor-pointer">
+        <div className="w-full bg-background border border-foreground flex justify-center items-center overflow-hidden">
+          <div ref={arrowRef} className="w-fit h-fit">
+            <ArrowUpRight color="var(--theme)" size={20} />
+          </div>
         </div>
         <div
           className="flex w-full justify-center items-center text-[12px] px-3 border border-foreground"
@@ -45,7 +98,7 @@ export const Featured: React.FC = () => {
       <SectionTitle text="projects" imagepath="/images/svg/ico-04.svg" />
       <Separator orientation="vertical" className="hidden sm:block" />
       {/* Work holder div */}
-      <div className="flex flex-col gap-7">
+      <div className="flex flex-col gap-14 sm:gap-7">
         <div className="flex flex-col gap-7 relative">
           <LinkHolder
             text="GITHUB"
@@ -76,7 +129,7 @@ export const Featured: React.FC = () => {
           </div>
         </div>
         <Separator className="hidden sm:block" />
-        <div className="flex flex-col sm:grid sm:grid-cols-[1fr_2px_1fr] gap-7 relative">
+        <div className="flex flex-col sm:grid sm:grid-cols-[1fr_2px_1fr] gap-14 sm:gap-7 relative">
           <LinkHolder
             text="GITHUB"
             href="https://github.com/topghostly/Echonote-react-native-app"

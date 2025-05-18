@@ -46,26 +46,38 @@ const InfoHoder = () => {
 export const Footer: React.FC = () => {
   return (
     <footer
-      className="w-full pb-5"
-      style={{
-        fontFamily: "var(--font-gobold)",
-      }}
+      className="w-full pb-5 flex flex-col gap-10"
+      style={
+        {
+          // fontFamily: "var(--font-gobold)",
+        }
+      }
     >
+      {/* <----------TOP SECTION----------> */}
+      {/* <div className="flex justify-between">
+        <h3 className="text-2xl font-bold">td.bolaji@gmail.com</h3>
+        <h3 className="text-2xl font-bold">(+234) 811 342 0013</h3>
+      </div> */}
+      {/* <----------MIDDLE SECTION----------> */}
+
+      {/* <----------BOTTOM SECTION----------> */}
       <div className="flex-col gap-4  md:flex-row flex md:justify-between items-center">
-        <InfoHoder />
+        {/* <InfoHoder /> */}
+        <div className="opacity-60">
+          <p className="text-xs">Copyright © 2025. All rights reserved.</p>
+        </div>
         <ul className="flex items-center gap-7 text-foreground">
           {SOCIALS.map((s, index) => {
             return (
               <li key={index}>
-                <Link href={"#"}>{s.name}</Link>
+                <Link href={"#"}>{s.icons}</Link>
               </li>
             );
           })}
         </ul>
-        <p className="text-md font-bold opacity-40 flex gap-2">
-          {" "}
-          <Swords />
-          CODE BY TOPE
+        <p className="text-xs opacity-60 flex gap-1 justify-center items-center">
+          <Swords size={14} />
+          Code by Tope
         </p>
       </div>
     </footer>

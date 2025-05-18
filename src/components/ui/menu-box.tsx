@@ -9,19 +9,19 @@ import { Github, icons, Linkedin, Mail, Twitter } from "lucide-react";
 export const SOCIALS = [
   {
     name: "GITHUB",
-    icons: <Github />,
+    icons: <Github size={18} />,
   },
   {
     name: "TWITTER",
-    icons: <Twitter />,
+    icons: <Twitter size={18} />,
   },
   {
     name: "LINKEDIN",
-    icons: <Linkedin />,
+    icons: <Linkedin size={18} />,
   },
   {
     name: "MAIL",
-    icons: <Mail />,
+    icons: <Mail size={18} />,
   },
 ];
 
