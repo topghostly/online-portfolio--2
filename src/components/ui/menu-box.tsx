@@ -3,7 +3,7 @@ import { ReactNode, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import ModeSwitch from "../theme/mode-toggle";
 import Link from "next/link";
-import { Github, icons, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 
 /* SOCIAL MEDIA DATA */
 export const SOCIALS = [
