@@ -2,6 +2,27 @@ import { ResumeDataTypes } from "@/types/resume";
 
 export const resumeData: ResumeDataTypes[] = [
   {
+    companyName: "Algora Analytics",
+    role: "SOFTWARE ENGINEER",
+    responsibilities:
+      "Designed and developed an AI-powered tutoring and learning marketplace that connects learners with vetted tutors for personalized learning sessions. Built the platform architecture end-to-end, including authentication, tutor onboarding and verification workflows, session scheduling, payment processing, calendar integrations, activity tracking, and automated background systems.",
+    contributions: [
+      "Architected and developed a scalable fullstack platform using Next.js, React, Node.js, Prisma, and PostgreSQL.",
+      "Implemented secure authentication and role-based onboarding flows for learners and tutors, including tutor vetting and approval systems.",
+      "Built session scheduling workflows with Google Calendar integration and automated session lifecycle management.",
+      "Developed protected backend APIs, cron-based automation systems, and secure tokenized workflows for session confirmations and status updates.",
+      "Integrated payment workflows and transactional email systems to support seamless booking and communication experiences.",
+      "Designed responsive, modern UI/UX interfaces with a focus on scalability, maintainability, and product usability.",
+      "Implemented structured activity logging, background processing systems, and modular application architecture to support future platform growth.",
+    ],
+    results: [
+      "Successfully built and launched a production-ready MVP capable of supporting real-world tutoring workflows and scalable user growth.",
+      "Reduced manual operational overhead through automated scheduling, notification, and session management systems.",
+      "Improved platform trust and quality control through tutor verification and approval workflows.",
+      "Established a scalable and maintainable application architecture optimized for future feature expansion and product iteration.",
+    ],
+  },
+  {
     companyName: "OwoHQ",
     role: "WEB DEVELOPER",
     responsibilities:

@@ -81,7 +81,7 @@ export const SectionTitle: React.FC<SectionTitleTypes> = ({
             gap: "5px",
           }}
         >
-          PRODUCTION <Copyright size={15} /> 2025
+          PRODUCTION <Copyright size={15} /> 2026
         </div>
         <div className="">
           <Test text={text} />

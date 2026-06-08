@@ -64,7 +64,7 @@ export const Footer: React.FC = () => {
       <div className="flex-col gap-4  md:flex-row flex md:justify-between items-center">
         {/* <InfoHoder /> */}
         <div className="opacity-60">
-          <p className="text-xs">Copyright © 2025. All rights reserved.</p>
+          <p className="text-xs">Copyright © 2026. All rights reserved.</p>
         </div>
         <ul className="flex items-center gap-7 text-foreground">
           {SOCIALS.map((s, index) => {
